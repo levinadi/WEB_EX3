@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- טעינת פונטים מגוגל  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <title>Adi's Jungle</title> 
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="script.js" defer></script> 
+</head>
+<body>
+
+    <!-- מוזיקת רקע שמתנגנת בלופ אוטומטי -->
+    <audio id="bg-music" src="assets/sounds/bg-music.mp3" autoplay loop></audio> 
+
+    <header>
+    <h1>Adi's Jungle</h1>
+    <p>Press the keys or click the cards to hear the sounds of the wild.</p>
+    <button id="music-toggle">🔊 Pause Music</button>
+</header>
+
+    <!-- פריסת גריד עבור הכרטיסיות -->
+    <main class="grid-container">
+    <div class="animal-card" data-key="c" data-sound="Cow.wav">
+        <img src="assets/images/Cow.jfif" alt="Cow"> 
+        <h2>Cow (C)</h2>
+    </div>
+    <div class="animal-card" data-key="f" data-sound="Frog.mp3">
+        <img src="assets/images/Frog.jfif" alt="Frog">
+        <h2>Frog (F)</h2>
+    </div>
+    <!-- כל כרטיס חיה מכיל מפתח להפעלה וקובץ סאונד משויך -->
+    <div class="animal-card" data-key="m" data-sound="Monkey.wav">
+        <img src="assets/images/Monkey.jpg" alt="Monkey">
+        <h2>Monkey (M)</h2>
+    </div>
+    <div class="animal-card" data-key="l" data-sound="Lion.ogg">
+        <img src="assets/images/Lion.jpg" alt="Lion">
+        <h2>Lion (L)</h2>
+    </div>
+    <div class="animal-card" data-key="w" data-sound="Wolf.wav">
+        <img src="assets/images/Wolf.jfif" alt="Wolf">
+        <h2>Wolf (W)</h2>
+    </div>
+    <div class="animal-card" data-key="d" data-sound="Dolphin.wav">
+        <img src="assets/images/Dolphine.avif" alt="Dolphin">
+        <h2>Dolphin (D)</h2>
+    </div>
+    <div class="animal-card" data-key="e" data-sound="Elephant.mp3">
+        <img src="assets/images/Elephant.jfif" alt="Elephant">
+        <h2>Elephant (E)</h2>
+    </div>
+</main>
+</body>
+</html>
