@@ -106,3 +106,21 @@ document.addEventListener('keydown', (event) => {
         card.click(); 
     }
 });
+
+// פונקציה לעקיפת חסימת ה-Autoplay של הדפדפן
+function enableAudioOnInteraction() {
+    if (bgMusic.paused) {
+        bgMusic.play().then(() => {
+            musicToggle.innerText = "🔇 Pause Music";
+        }).catch(error => {
+            console.log("Audio play failed:", error);
+        });
+    }
+    // ברגע שהמוזיקה התחילה, המאזין יוסר כדי לא להפעיל שוב ושוב
+    document.removeEventListener('click', enableAudioOnInteraction);
+    document.removeEventListener('keydown', enableAudioOnInteraction);
+}
+
+// מאזינים ללחיצה הראשונה של המשתמש בכל מקום בדף
+document.addEventListener('click', enableAudioOnInteraction);
+document.addEventListener('keydown', enableAudioOnInteraction);
